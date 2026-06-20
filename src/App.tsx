@@ -1,1 +1,5 @@
-export default function App(){ return <div>Vyra POS Dashboard</div>; }
+import DashboardPage from './pages/DashboardPage';
+
+export default function App(){
+ return <DashboardPage />;
+}
