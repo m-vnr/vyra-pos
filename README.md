@@ -12,4 +12,4 @@ Multi-tenant Restaurant POS SaaS built with React, TypeScript, Supabase and Post
 - Analytics
 - Multi Outlet SaaS
 
-Project initialized by ChatGPT.
+Project initialized by Niranjan Reddy.
