@@ -1,0 +1,5 @@
+-- Row Level Security
+ALTER TABLE outlets ENABLE ROW LEVEL SECURITY;
+ALTER TABLE user_profiles ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY outlets_select ON outlets FOR SELECT USING (true);
