@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useCartStore } from '../store/cartStore';
+import { processPayment } from '../services/paymentService';
 
 export default function PaymentModal(){
  const [method,setMethod] = useState('UPI');
@@ -8,7 +9,12 @@ export default function PaymentModal(){
 
  const amount = items.reduce((sum:number,item:any)=>sum + (item.price * item.qty),0);
 
- const completePayment = () => {
+ const completePayment = async () => {
+   await processPayment({
+     orderId:'TEMP_ORDER',
+     amount,
+     paymentMethod:method
+   });
    alert(`Payment successful via ${method} for ₹${amount}`);
    clearCart();
  };
