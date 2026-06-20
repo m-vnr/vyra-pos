@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS inventory_items (
+ id UUID PRIMARY KEY,
+ name VARCHAR(255) NOT NULL,
+ quantity NUMERIC(12,2) DEFAULT 0,
+ unit VARCHAR(20),
+ reorder_level NUMERIC(12,2) DEFAULT 0,
+ created_at TIMESTAMP DEFAULT NOW()
+);
